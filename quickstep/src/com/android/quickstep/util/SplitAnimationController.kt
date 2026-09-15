@@ -258,7 +258,7 @@ class SplitAnimationController(val splitSelectStateController: SplitSelectStateC
             builder.add(ObjectAnimator.ofFloat(taskContentView, View.SCALE_X, finalScaleX))
 
             // Reset other dimensions
-            // TODO(b/271468547), can't set Y translate to 0, need to account for top space
+            // FIXME: Account for top space when setting Y translation
             taskContentView.scaleY = 1f
             val translateYResetVal: Float =
                 if (!isPrimaryTaskSplitting) 0f
